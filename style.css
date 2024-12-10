@@ -143,6 +143,10 @@ section {
     padding: 10px;
 }
 
+.project-title {
+    text-align: center;
+}
+
 .timeline-item::before {
     content: '';
     position: absolute;
