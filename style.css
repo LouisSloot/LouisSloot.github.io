@@ -51,14 +51,17 @@ section {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 65%;
+    width: 80%;
     height: 50vh;
     margin: 0 auto;
 }
 
 #hero-left {
+    display: flex;
+    flex-direction: column;
     width: 50%;
     margin-right: 20px;
+    margin-left: 10%;
 }
 
 #link-images {
@@ -91,8 +94,6 @@ section {
     height: auto;
 }
 
-
-
 #sr-pic {
     width: 400px;
     max-width: 100%;
@@ -104,19 +105,129 @@ section {
 
 #hero-right {
     width: 50%;
+    margin-right: 10%;
 }
 
-@media (max-width: 800px) {
+.section-title {
+    text-align: center;
+    font-size: 2em;
+}
+
+#timeline {
+    position: relative;
+    width: 85%;
+    margin: 0 auto; /* center timeline */
+  }
+
+#timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* center the line */
+    width: 8px;
+    background-color: #326d27;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* timeline Items */
+.timeline-item {
+    border: 3px solid #326d27;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* creates a stacking context */
+    width: 45%; /* width of each item's content box */
+    box-sizing: border-box; /* fixes padding-ticks problem */
+    padding: 10px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 11.1%; /* approx of 1/9 */
+    height: 4px;
+    background-color: #633b25;
+    z-index: 1;
+}
+
+
+.left-item {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+.left-item::before {
+    left: 100%;
+    margin-left: 3px; /* width of parent border */
+}
+
+.right-item {
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+.right-item::before {
+    right: 100%;
+    margin-right: 3px;
+}
+
+.project-video {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-desc {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Clearfix for the Timeline */
+#timeline::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 1000px) { /* adjust once text is written */
     #hero-container {
         flex-direction: column;
         height: auto;
     }
+    #hero-left {
+        margin: 0;
+        align-items: center;
+        width: 70%;
+    }
 
+    #sr-pic {
+        max-width: 80%;
+    }
 
+    #hero-right {
+        margin: 0;
+        width: 70%;
+        text-align: center;
+    }
+
+    #timeline {
+        width: 100%;
+      }
 }
 
 /* Links */
 
 a:hover {
-    color: #64b5f6; /* Brighter blue for hover effect */
+    color: #64b5f6;
 }
