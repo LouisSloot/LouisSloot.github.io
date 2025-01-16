@@ -107,9 +107,25 @@ section {
     width: 50%;
     margin-right: 10%;
 }
+a {
+    text-decoration: none;
+    color: #4fc04f;
+}
 
-.section-title {
+a:hover {
+    opacity: 0.8;
+    color: #4fc04f;
+}
+
+.upper-section-title {
+    border: 1px solid white;
+    width: 15%;
+    margin-left: 42.5%; /* 50% - (15/2)% */
     text-align: center;
+    font-size: 2em;
+}
+
+.lower-section-title {
     font-size: 2em;
 }
 
@@ -131,7 +147,7 @@ section {
     z-index: 2;
 }
 
-/* timeline Items */
+/* timeline items */
 .timeline-item {
     border: 3px solid #326d27;
     display: flex;
@@ -157,10 +173,9 @@ section {
     z-index: 1;
 }
 
-
 .left-item {
     float: left;
-    text-align: right;
+    text-align: center;
     clear: both;
 }
 
@@ -171,7 +186,7 @@ section {
 
 .right-item {
     float: right;
-    text-align: left;
+    text-align: center;
     clear: both;
 }
 
@@ -181,7 +196,7 @@ section {
 }
 
 .project-video {
-    width: 50%;
+    width: 80%;
     height: auto;
     border-radius: 8px;
     border: 1px solid white;
@@ -194,7 +209,7 @@ section {
 
 .project-desc {
     font-size: 1rem;
-    color: #666;
+    color: white;
 }
 
 /* Clearfix for the Timeline */
@@ -204,7 +219,135 @@ section {
     clear: both;
 }
 
-@media (max-width: 1000px) { /* adjust once text is written */
+.education-container {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.vl {
+    left: 5px;
+    width: 0%;
+    border-right: 5px solid #326d27;
+    height: 140px;
+}
+
+.exp-vl {
+    left: 5px;
+    width: 0%;
+    border-right: 5px solid #326d27;
+    height: 300px;
+}
+
+.education-text-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+#education-text {
+    border-bottom: 3px solid #633b25;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+#education-subtext-container {
+    height: 30%;
+    position: relative;
+    margin-left: 10%;
+    border-left: 3px solid #633b25;
+    border-bottom: 3px solid #633b25;
+    display: flex;
+}
+
+#education-subtext {
+    position: absolute;
+    margin-top: 0;
+    top: 60%;
+    left: 0;
+}
+
+.exp-container {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.exp-text-stack {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#exp-text {
+    border-bottom: 3px solid #633b25;
+    margin-bottom: 0;
+    font-weight: bold;
+    
+}
+
+#exp-subtext-container {
+    height: 15%;
+    position: relative;
+    margin-left: 10%;
+    border-left: 3px solid #633b25;
+    border-bottom: 3px solid #633b25;
+    display: flex;
+}
+
+#exp-subtext {
+    position: absolute;
+    margin-top: 0;
+    top: 60%;
+    left: 0;
+}
+
+#research-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.research-item {
+    border: 5px solid #326d27;
+    width: 35%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.research-item-header {
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.research-item-desc {
+    text-align: center;
+    margin-top: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.drive-link-btn {
+    display: inline-block;
+    color: white;
+    border: none;
+    padding: 0.1em 0.6em;
+    outline: none;
+    text-align: center;
+    font-size: 1 em;
+    margin: 0 0.2em;
+    background: #4fc04f;
+    border-radius: 10%;
+    margin-bottom: 20px;
+}
+.drive-link-btn {
+    background: #4fc04f;
+}
+.drive-link-btn:hover {
+    color: white;
+}
+
+@media (max-width: 1250px) { /* adjust once text is written */
     #hero-container {
         flex-direction: column;
         height: auto;
@@ -228,10 +371,4 @@ section {
     #timeline {
         width: 100%;
       }
-}
-
-/* Links */
-
-a:hover {
-    color: #64b5f6;
 }
