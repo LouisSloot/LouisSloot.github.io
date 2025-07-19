@@ -22,22 +22,22 @@
     <section id="hero-container">
       <div id="hero-left">
         <h2 id="about-me">About Me</h2>
-        <img id="sr-pic" src="Cropped_Sr_Pic.jpg" alt="A lovely photo of me!" />
+        <img id="sr-pic" src="./visuals/Cropped_Sr_Pic.jpg" alt="A lovely photo of me!" />
         <div id="link-images">
           <a
             href="https://www.linkedin.com/in/louis-sloot-26bb60324"
             target="_blank"
           >
-            <img id="linkedin-icon" src="Linkedin_Icon.png" alt="Linkedin" />
+            <img id="linkedin-icon" src="./visuals/Linkedin_Icon.png" alt="Linkedin" />
           </a>
           <a href="https://github.com/LouisSloot" target="_blank">
-            <img id="github-icon" src="Github_Icon.png" alt="Github" />
+            <img id="github-icon" src="./visuals/Github_Icon.png" alt="Github" />
           </a>
           <a
             href="https://drive.google.com/file/d/1UrzFq4vYPlg9VPp6RQEoOfujyesNMuTo/view?usp=sharing"
             target="_blank"
           >
-            <img id="resume-icon" src="Resume_Icon.png" alt="Resume" />
+            <img id="resume-icon" src="./visuals/Resume_Icon.png" alt="Resume" />
           </a>
         </div>
       </div>
@@ -74,25 +74,42 @@
         <div class="timeline-item left-item">
           <h3 class="project-title">Selfstat</h3>
           <video class="project-video" autoplay loop muted playsinline>
-            <source src="Selfstat_Snippet.mp4" type="video/mp4" />
+            <source src="./snippets/Selfstat_Snippet.mp4" type="video/mp4" />
           </video>
           <p class="project-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Finally, a project I can use! This software allows a user to upload
+            footage of an amateur basketball game, and it will generate the
+            corresponding box score for each player. The overall pipeline
+            relies on some standard CNNs, YOLO models, useful heuristics, and
+            a whole bunch of finetuning. There are so many interesting design
+            decisions to discuss. I really loved this project if only
+            because it allowed me to train fundamental skills in machine learning,
+            AI, and project development while building something I care about.
+            My main takeaway: we were living in the dark ages before Google Colab. 
+            (July 2025)
           </p>
         </div>
         <div class="timeline-item right-item">
           <h3 class="project-title">C0 Bytecode Interpreter</h3>
           <video class="project-video" autoplay loop muted playsinline>
-            <source src="Bytecode_Interpreter_Snippet.mp4" type="video/mp4" />
+            <source src="./snippets/Bytecode_Interpreter_Snippet.mp4" type="video/mp4" />
           </video>
           <p class="project-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            My implementation of a virtual machine for the C0 programming 
+            language for 15-122 @CMU. Built in C, this VM executes C0 bytecode 
+            through a stack-based 
+            architecture, handling control flow, function calls, 
+            heap allocation, etc. Implementing instruction parsing, operand stack 
+            management, call stack frames, and runtime error handling, this is a
+            true virtual machine capable of running arbitrary C0 bytecode
+            programs. A deep dive into low-level systems programming and 
+            language implementation. (Apr. 2025)
           </p>
         </div>
         <div class="timeline-item left-item">
           <h3 class="project-title">Portfolio Website</h3>
           <video class="project-video" autoplay loop muted playsinline>
-            <source src="Portfolio_Website_Snippet.mp4" type="video/mp4" />
+            <source src="./snippets/Portfolio_Website_Snippet.mp4" type="video/mp4" />
           </video>
           <p class="project-desc">
             Hey... you're already here! This is my first 
@@ -105,7 +122,7 @@
         <div class="timeline-item right-item">
           <h3 class="project-title">The Fractal Factory</h3>
           <video class="project-video" autoplay loop muted playsinline>
-            <source src="Fractal_Factory_Snippet.mp4" type="video/mp4" />
+            <source src="./snippets/Fractal_Factory_Snippet.mp4" type="video/mp4" />
           </video>
           <p class="project-desc">
             My final project for Intro CS @CMU. It being self-directed, I 
@@ -126,7 +143,7 @@
         <div class="timeline-item left-item">
           <h3 class="project-title">Finger Ninja</h3>
           <video class="project-video" autoplay loop muted playsinline>
-            <source src="112_Ninja_Snippet.mp4" type="video/mp4" />
+            <source src="./snippets/112_Ninja_Snippet.mp4" type="video/mp4" />
           </video>
           <p class="project-desc">
             My first ever Hackathon! Look at me slice those digital fruit. A 
@@ -148,7 +165,7 @@
         <div class="timeline-item right-item">
           <h3 class="project-title">HPE and Dance</h3>
           <video class="project-video" autoplay loop muted playsinline>
-            <source src="HL_IA_Snippet.mp4" type="video/mp4" />
+            <source src="./snippets/HL_IA_Snippet.mp4" type="video/mp4" />
           </video>
           <p class="project-desc">
             This was my first full-scale computer science project. In short, I
@@ -194,6 +211,15 @@
       <div class="exp-container">
         <div class="exp-vl"></div>
         <div class="exp-text-stack">
+          <p id="exp-text">
+            &nbsp;&nbsp;Resident Advisor (RA) @CMU (Feb. 2025 - Present)
+          </p>
+          <div id="exp-subtext-container">
+            <p id="exp-subtext">
+              &nbsp;Supervising and mentoring 20 first-year students, providing 
+              guidance on academic adjustment and personal development
+            </p>
+          </div>
           <p id="exp-text">
             &nbsp;&nbsp;TechNights Session Lead @CMU (Nov. 2024)
           </p>
