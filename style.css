@@ -121,7 +121,31 @@ a:hover {
 }
 
 .lower-section-title {
-    font-size: 2em;
+    font-size: 2.5em;
+    text-align: left;
+    margin: 40px 0;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #326d27, #4fc04f);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(50, 109, 39, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    width: fit-content;
+    position: relative;
+}
+
+.lower-section-title::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(135deg, #4fc04f, #326d27);
+    border-radius: 20px;
+    z-index: -1;
 }
 
 /* Timeline Styles */
@@ -218,6 +242,11 @@ a:hover {
 .education-container, .exp-container {
     display: flex;
     margin-bottom: 0;
+    position: relative;
+}
+
+.exp-container {
+    min-height: 400px;
 }
 
 .vl {
@@ -228,10 +257,12 @@ a:hover {
 }
 
 .exp-vl {
-    left: 5px;
+    position: absolute;
+    left: 0px;
     width: 0%;
     border-right: 5px solid #326d27;
-    height: 300px;
+    height: 100%;
+    top: 0;
 }
 
 .education-text-stack, .exp-text-stack {
@@ -247,43 +278,28 @@ a:hover {
 }
 
 #education-subtext-container, #exp-subtext-container {
-    height: 30%;
-    position: relative;
     margin-left: 10%;
     border-left: 3px solid #633b25;
     border-bottom: 3px solid #633b25;
-    display: flex;
-}
-
-#exp-subtext-container {
-    height: 15%;
+    padding: 10px 0 10px 15px;
+    margin-bottom: 20px;
 }
 
 #education-subtext, #exp-subtext {
-    position: absolute;
-    margin-top: 0;
-    top: 60%;
-    left: 0;
+    margin: 0;
+    line-height: 1.4;
 }
 
 /* Research Section */
 .research-experience {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 40px;
     margin-bottom: 40px;
     padding: 30px 0;
-    border-bottom: 2px solid #633b25;
 }
 
-.research-experience:last-child {
-    border-bottom: none;
-}
 
-.research-content {
-    flex: 1;
-    max-width: 60%;
-}
 
 .research-title {
     font-size: 1.5em;
@@ -301,16 +317,25 @@ a:hover {
 .research-visual {
     flex-shrink: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    max-width: 40%;
+    align-items: center;
+    width: 40%;
+    gap: 15px;
 }
 
 .research-image {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    border: 2px solid #326d27;
+}
+
+.research-content {
+    flex: 1;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .drive-link-btn {
@@ -436,6 +461,8 @@ a:hover {
     
     .lower-section-title {
         font-size: 1.8em;
+        padding: 15px 25px;
+        letter-spacing: 1px;
     }
     
     /* Timeline mobile - single column */
@@ -544,6 +571,8 @@ a:hover {
     
     .lower-section-title {
         font-size: 1.5em;
+        padding: 12px 20px;
+        letter-spacing: 1px;
     }
     
     #sr-pic {
