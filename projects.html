@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Louis Sloot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1><a href="index.html" style="color: #e0e0e0; text-decoration: none;">Louis Sloot</a></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="blog.html">Musings</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="projects">
+      <h2 class="upper-section-title">Projects</h2>
+      <div id="timeline">
+        <div class="timeline-item left-item">
+          <h3 class="project-title">Selfstat</h3>
+          <div class="project-video coming-soon">
+            Coming Soon
+          </div>
+          <p class="project-desc">
+            Finally, a project I can use! This software allows a user to upload
+            footage of an amateur basketball game, and it will generate the
+            corresponding box score for each player. The overall pipeline
+            relies on some standard CNNs, YOLO models, useful heuristics, and
+            a whole bunch of finetuning. There are so many interesting design
+            decisions to discuss. I really loved this project if only
+            because it allowed me to train fundamental skills in machine learning,
+            AI, and project development while building something I care about.
+            My main takeaway: we were living in the dark ages before Google Colab.
+            (July 2025 - WIP)
+          </p>
+        </div>
+        <div class="timeline-item right-item">
+          <h3 class="project-title">C0 Bytecode Interpreter</h3>
+          <video class="project-video" autoplay loop muted playsinline>
+            <source src="./snippets/Bytecode_Interpreter_Snippet.mp4" type="video/mp4" />
+          </video>
+          <p class="project-desc">
+            My implementation of a virtual machine for the C0 programming
+            language for 15-122 @CMU. Built in C, this VM executes C0 bytecode
+            through a stack-based
+            architecture, handling control flow, function calls,
+            heap allocation, etc. Implementing instruction parsing, operand stack
+            management, call stack frames, and runtime error handling, this is a
+            true virtual machine capable of running arbitrary C0 bytecode
+            programs. A deep dive into low-level systems programming and
+            language implementation. (Apr. 2025)
+          </p>
+        </div>
+        <div class="timeline-item left-item">
+          <h3 class="project-title">Portfolio Website</h3>
+          <video class="project-video" autoplay loop muted playsinline>
+            <source src="./snippets/Portfolio_Website_Snippet.mp4" type="video/mp4" />
+          </video>
+          <p class="project-desc">
+            Woah... meta. This is my first
+            attempt at web design. I wanted a space to convey my
+            projects in a more visual medium, as well as give a
+            feel for who I really am beyond a resume.
+            Done in HTML and CSS. Hope you enjoy! (Jan. 2025)
+          </p>
+        </div>
+        <div class="timeline-item right-item">
+          <h3 class="project-title">The Fractal Factory</h3>
+          <video class="project-video" autoplay loop muted playsinline>
+            <source src="./snippets/Fractal_Factory_Snippet.mp4" type="video/mp4" />
+          </video>
+          <p class="project-desc">
+            My final project for Intro CS @CMU. It being self-directed, I
+            immediately knew I wanted to work with fractal geometry. So, I
+            thought, no better way than to highlight the elegance and power of
+            recursion in programming. After countless hours of sketching out
+            trig problems, trying to learn photoshop, and polishing the UI with
+            CMU Graphics, I put together a fun tool (and game) from which
+            striking complexity can emerge. (Dec. 2024)
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1F-tGEdFseoLUMFqDfaoqOApcItgGBfK2/view?usp=sharing"
+            target="_blank"
+            class="drive-link-btn">
+            Demo
+          </a>
+        </div>
+        <div class="timeline-item left-item">
+          <h3 class="project-title">Finger Ninja</h3>
+          <video class="project-video" autoplay loop muted playsinline>
+            <source src="./snippets/112_Ninja_Snippet.mp4" type="video/mp4" />
+          </video>
+          <p class="project-desc">
+            My first ever Hackathon! Look at me slice those digital fruit. A
+            rite of passage here at CMU, my 1st Place Hack112 experience was
+            maximally awesome. Though going to bed at 6am (does that still
+            count as going to bed?) is not exactly usual for me, smoothing out
+            the interplay between OpenCV, Mediapipe, and CMU Graphics as my
+            group members handled the game physics was well worth it. This was a
+            great way for me to practice taking a project from an idea to
+            deployment in just a short 16 hours. (Nov. 2024)
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1TF1QpsigkTDT6b76vKdtqdvWwOTlZkZk/view?usp=sharing"
+            target="_blank"
+            class="drive-link-btn">
+            Demo
+          </a>
+        </div>
+        <div class="timeline-item right-item">
+          <h3 class="project-title">HPE and Dance</h3>
+          <video class="project-video" autoplay loop muted playsinline>
+            <source src="./snippets/HL_IA_Snippet.mp4" type="video/mp4" />
+          </video>
+          <p class="project-desc">
+            This was my first full-scale computer science project. In short, I
+            built a software to aid my high school's dance teacher. After
+            ideation meetings and product proposals, we decided on a
+            tool that could automate and aid his assessment of students
+            attempting a historically tricky movement. Focusing on OpenCV,
+            Mediapipe, and ChatGPT integration, I delivered a program that can
+            analyze his students' dancing and provide accurate feedback on
+            necessary improvements. (Feb. 2024)
+          </p>
+          <a
+            href="https://youtu.be/nFM3FxSrJlU"
+            target="_blank"
+            class="drive-link-btn">
+            Demo
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
