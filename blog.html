@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Musings - Louis Sloot</title>
+    <title>Blog - Louis Sloot</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -19,34 +19,66 @@
         <ul>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="research.html">Research</a></li>
-          <li><a href="blog.html">Musings</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
       </nav>
     </header>
     <section id="blog">
-      <h2 class="upper-section-title">Musings</h2>
-      <div class="blog-grid">
-        <a href="posts/thoughts-on-love.html" class="blog-card">
-          <div class="blog-card-content">
-            <h3 class="blog-card-title">
-              Thoughts on <em>Thoughts on Love</em>
-            </h3>
-            <p class="blog-card-preview">
-              Reflections on Anne Lamott's <em>Somehow: Thoughts on Love</em>.
-            </p>
-            <span class="blog-card-date">December 2025</span>
-          </div>
-        </a>
-        <a href="posts/cmu-megathread.html" class="blog-card">
-          <div class="blog-card-content">
-            <h3 class="blog-card-title">CMU Megathread</h3>
-            <p class="blog-card-preview">
-              A reflection on my experience at Carnegie Mellon, from courses to
-              community.
-            </p>
-            <span class="blog-card-date">Work in Progress</span>
-          </div>
-        </a>
+      <h2 class="upper-section-title">Blog</h2>
+
+      <!-- CMU Megathread Section -->
+      <div class="blog-category">
+        <h3 class="blog-category-header">CMU Megathread</h3>
+        <div class="blog-grid">
+          <a href="posts/cmu-megathread.html" class="blog-card">
+            <div class="blog-card-content">
+              <h3 class="blog-card-title">CMU Megathread</h3>
+              <p class="blog-card-preview">
+                A reflection on my experience at Carnegie Mellon, from courses to
+                community.
+              </p>
+              <span class="blog-card-date">Work in Progress</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- ML Paper Reviews Section -->
+      <div class="blog-category">
+        <h3 class="blog-category-header">ML Paper Reviews</h3>
+        <div class="blog-grid">
+          <a href="posts/repe-paper-review.html" class="blog-card">
+            <div class="blog-card-content">
+              <h3 class="blog-card-title">
+                Representation Engineering: A Top-Down Approach to AI Transparency
+              </h3>
+              <p class="blog-card-preview">
+                A deep dive into RepE, exploring how representations can be used
+                to understand and control LLM behavior through Linear Artificial
+                Tomography (LAT).
+              </p>
+              <span class="blog-card-date">January 2026</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Musings Section -->
+      <div class="blog-category">
+        <h3 class="blog-category-header">Musings</h3>
+        <div class="blog-grid">
+          <a href="posts/thoughts-on-love.html" class="blog-card">
+            <div class="blog-card-content">
+              <h3 class="blog-card-title">
+                Thoughts on <em>Thoughts on Love</em>
+              </h3>
+              <p class="blog-card-preview">
+                Reflections on Anne Lamott's <em>Somehow: Thoughts on Love</em>.
+              </p>
+              <span class="blog-card-date">December 2025</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   </body>
