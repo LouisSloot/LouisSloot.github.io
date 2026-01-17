@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -90,19 +90,25 @@
         <p>
           Here we see the so-called "neural trajectories" of a given language
           model when processing two different texts: one with low utility (blue)
-          and one with high utility (red). The important thing to note here is
-          that, in representation space, there seems to be some consistent gap
-          between low and high utility trajectories (in fact, they are linearly
-          separable).
+          and one with high utility (red). For the purposes of this overview,
+          "utility" will refer to the abstract human concept of interest; most
+          of my examples will use honesty or truthfulness as the utility. The
+          Token Position axis refers to how much of the input the model has
+          read—essentially a time axis. For now, we can think of the other two
+          axes, PC1 and PC2, as somehow converting the internal state of the
+          model to a 2D point, (PC1', PC2'), and plotting it.
         </p>
         <p>
-          The details of what these trajectories actually are and where the heck
-          these principal components are coming from will be discussed later.
-          But for now, it should feel important that we can find some relation
-          between a model's internal state and the utility of a text. In an
-          application where our utility is truthfulness, the ability for us to
-          measure and/or influence the utility of the model's output is clearly
-          beneficial.
+          The important thing to note here is that, in representation space,
+          there seems to be a consistent gap between low and high utility
+          trajectories (in fact, they are linearly separable). The details of
+          what these trajectories actually are and where the heck these
+          "principal components" (PCs) are coming from will be discussed later.
+          But for now, it should feel important that we can find a relation
+          between a model's numerical internal state and human-level semantics.
+          In an application where our utility is truthfulness, the ability for
+          us to measure and/or influence the utility of the model's output is
+          clearly beneficial.
         </p>
 
         <h2>... Then What Is a Representation?</h2>
@@ -226,20 +232,21 @@
           The naive approach would be to apply PCA directly to the set of
           well-predicting representations acquired in step (2). However, these
           representations nonetheless embed some irrelevant information related
-          to the text. For example, in the sentence "I am unhappy with the
-          weather today," the representation at layer 30 for token position
-          "today" will be non-negligibly impacted by non-utility factors like
-          sentence structure and the fact that the sentence is about the
-          weather.
+          to the text. For example, in the text "Question: What is the capital
+          of France? Answer: Paris," the representation at layer 30 for token
+          position "Paris" will be non-negligibly impacted by non-utility
+          factors like sentence structure and the fact that the text is about
+          geography.
         </p>
         <p>
           To address this, the authors first generate a set of difference
-          vectors by extracting representations obtained from sentence pairs
-          that differ only in their expression of the utility: "I am unhappy
-          with the weather today" and "I am happy with the weather today." The
-          difference vector of these two prompts will therefore point in a
-          direction of low utility to high utility, the irrelevant shared traits
-          of the sentences having been canceled out.
+          vectors by extracting representations obtained from two sentences that
+          differ only in their expression of the utility: "Question: What is the
+          capital of France? Answer: Paris" and "Question: What is the capital
+          of France? Answer: London." This difference vector will therefore
+          point in a direction of low utility to high utility (or vice-versa),
+          the irrelevant shared traits of the sentences having been canceled
+          out.
         </p>
         <p>
           Applying PCA to this denoised set now yields a very powerful
