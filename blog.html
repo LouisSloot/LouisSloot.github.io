@@ -1,83 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog - Louis Sloot</title>
+    <title>Blog — Louis Sloot</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23326d27'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='%23e8f5e9' font-family='Georgia,serif'>L</text></svg>"
+    />
+    <script>
+      /* Set the theme before first paint to avoid a flash. */
+      document.documentElement.setAttribute(
+        "data-theme",
+        localStorage.getItem("theme") ||
+          (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+      );
+    </script>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="content.js"></script>
+    <script defer src="site.js"></script>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <h1>
-          <a href="index.html" style="color: #e0e0e0; text-decoration: none"
-            >Louis Sloot</a
-          >
-        </h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </nav>
-    </header>
-    <section id="blog">
-      <h2 class="upper-section-title">Blog</h2>
-
-      <!-- CMU Megathread Section -->
-      <div class="blog-category">
-        <h3 class="blog-category-header">CMU Megathread</h3>
-        <div class="blog-grid">
-          <a href="posts/cmu-megathread.html" class="blog-card">
-            <div class="blog-card-content">
-              <h3 class="blog-card-title">CMU Megathread</h3>
-              <p class="blog-card-preview">
-                A reflection on my experience at Carnegie Mellon.
-              </p>
-              <span class="blog-card-date">Work in Progress</span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- ML Paper Reviews Section -->
-      <div class="blog-category">
-        <h3 class="blog-category-header">ML Paper Reviews</h3>
-        <div class="blog-grid">
-          <a href="posts/repe-paper-review.html" class="blog-card">
-            <div class="blog-card-content">
-              <h3 class="blog-card-title">
-                Representation Engineering: A Top-Down Approach to AI
-                Transparency
-              </h3>
-              <p class="blog-card-preview">
-                An overview of Representation Engineering (RepE).
-              </p>
-              <span class="blog-card-date">January 2026</span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- Musings Section -->
-      <div class="blog-category">
-        <h3 class="blog-category-header">Musings</h3>
-        <div class="blog-grid">
-          <a href="posts/thoughts-on-love.html" class="blog-card">
-            <div class="blog-card-content">
-              <h3 class="blog-card-title">
-                Thoughts on <em>Thoughts on Love</em>
-              </h3>
-              <p class="blog-card-preview">
-                Reflections on Anne Lamott's <em>Somehow: Thoughts on Love</em>.
-              </p>
-              <span class="blog-card-date">December 2025</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
+    <div id="site-header"></div>
+    <main class="container">
+      <h1 class="page-title">Blog</h1>
+      <div id="blog-list"></div>
+      <noscript>
+        <p>
+          This site's text is rendered with a little JavaScript — please enable it.
+          <a href="index.html">Home</a> · <a href="projects.html">Projects</a> ·
+          <a href="research.html">Research</a>
+        </p>
+      </noscript>
+    </main>
+    <div id="site-footer"></div>
   </body>
 </html>

@@ -4,34 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CMU Megathread - Louis Sloot</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23326d27'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='%23e8f5e9' font-family='Georgia,serif'>L</text></svg>"
+    />
+    <script>
+      /* Set the theme before first paint to avoid a flash. */
+      document.documentElement.setAttribute(
+        "data-theme",
+        localStorage.getItem("theme") ||
+          (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+      );
+    </script>
     <link rel="stylesheet" href="../style.css" />
+    <script defer src="../content.js"></script>
+    <script defer src="../site.js"></script>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <h1>
-          <a href="../index.html" style="color: #e0e0e0; text-decoration: none"
-            >Louis Sloot</a
-          >
-        </h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="../projects.html">Projects</a></li>
-          <li><a href="../research.html">Research</a></li>
-          <li><a href="../blog.html">Blog</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="blog-post">
-      <a href="../blog.html" class="back-to-blog">← Back to Blog</a>
-      <div class="blog-post-header">
-        <h1 class="blog-post-title">CMU Megathread</h1>
-        <div class="blog-post-meta">
-          <span class="blog-post-date">Work in Progress</span>
-        </div>
-      </div>
-      <div class="blog-post-content">
+    <div id="site-header"></div>
+    <main class="container post">
+      <a href="../blog.html" class="back-link">← Back to Blog</a>
+      <header class="post-header">
+        <h1 class="post-title">CMU Megathread</h1>
+        <p class="post-meta">Work in Progress</p>
+      </header>
+      <div class="post-content">
         <p>
           Before I talk about my experience here at CMU, be it courses or
           beyond, it's worth motivating why I want to do so in the first place.
@@ -71,9 +68,7 @@
             <h2>Semester 3</h2>
           </summary>
           <div class="semester-content">
-            <p style="text-align: center; color: #999; font-style: italic">
-              Coming soon...
-            </p>
+            <p class="coming-soon-note">Coming soon...</p>
           </div>
         </details>
 
@@ -82,9 +77,7 @@
             <h2>Semester 2</h2>
           </summary>
           <div class="semester-content">
-            <p style="text-align: center; color: #999; font-style: italic">
-              Coming soon...
-            </p>
+            <p class="coming-soon-note">Coming soon...</p>
           </div>
         </details>
 
@@ -267,7 +260,7 @@
               <em
                 >Narrative of the Life of Frederick Douglass, an American
                 Slave</em
-              >, Andreessen's <em>Techno-Optomist Manifesto</em>, environmental
+              >, Andreessen's <em>Techno-Optimist Manifesto</em>, environmental
               reports by Boston Consulting Group, and (much) more, I learned how
               to be a great engineer while being a great person. I should also
               mention that a benefit of incredible courses such as 16-161 is
@@ -275,7 +268,7 @@
               incomparable friends, mentors, teachers, students, all in one. And
               lastly, Prof. Nourbakhsh has got to be one of the coolest people
               in the world. Half the value of this course was hoping our
-              discussions would get derailed by him regailing us with stories of
+              discussions would get derailed by him regaling us with stories of
               his time at NASA working on Mars rovers, how he taught Sergey Brin
               and Larry Page at Stanford, or why he turned down an offer from
               Bell Labs. His intelligence and guidance was invaluable to me as a
@@ -284,6 +277,7 @@
           </div>
         </details>
       </div>
-    </div>
+    </main>
+    <div id="site-footer"></div>
   </body>
 </html>

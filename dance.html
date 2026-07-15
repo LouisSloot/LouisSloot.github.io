@@ -1,187 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Under Construction - Louis Sloot</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: "Courier New", Courier, monospace;
-        background-color: #121212;
-        color: #e0e0e0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        text-align: center;
-        padding: 20px;
-        box-sizing: border-box;
-      }
-
-      .construction-container {
-        max-width: 600px;
-        border: 3px solid #326d27;
-        border-radius: 15px;
-        padding: 40px;
-        background-color: #1f1f1f;
-      }
-
-      .construction-emoji {
-        font-size: 4em;
-        animation: bounce 2s infinite;
-        margin-bottom: 20px;
-      }
-
-      @keyframes bounce {
-        0%,
-        20%,
-        50%,
-        80%,
-        100% {
-          transform: translateY(0);
-        }
-        40% {
-          transform: translateY(-20px);
-        }
-        60% {
-          transform: translateY(-10px);
-        }
-      }
-
-      h1 {
-        color: #4fc04f;
-        font-size: 2.5em;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      }
-
-      .subtitle {
-        font-size: 1.2em;
-        margin-bottom: 30px;
-        color: #cccccc;
-      }
-
-      .progress-bar {
-        width: 100%;
-        height: 20px;
-        background-color: #333;
-        border-radius: 10px;
-        overflow: hidden;
-        margin: 20px 0;
-      }
-
-      .progress-fill {
-        height: 100%;
-        background: linear-gradient(90deg, #4fc04f, #326d27);
-        width: 23%;
-        animation: pulse 3s ease-in-out infinite;
-      }
-
-      @keyframes pulse {
-        0% {
-          opacity: 0.6;
-        }
-        50% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0.6;
-        }
-      }
-
-      .status-text {
-        font-size: 0.9em;
-        color: #999;
-        margin-top: 10px;
-      }
-
-      .fun-facts {
-        margin-top: 30px;
-        padding: 20px;
-        background-color: #2a2a2a;
-        border-radius: 10px;
-        border-left: 4px solid #4fc04f;
-      }
-
-      .fun-facts h3 {
-        color: #4fc04f;
-        margin-top: 0;
-      }
-
-      .back-link {
-        margin-top: 30px;
-      }
-
-      .back-link a {
-        color: #4fc04f;
-        text-decoration: none;
-        font-size: 1.1em;
-        padding: 10px 20px;
-        border: 2px solid #4fc04f;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
-
-      .back-link a:hover {
-        background-color: #4fc04f;
-        color: #121212;
-      }
-
-      .blinking {
-        animation: blink 1.5s infinite;
-      }
-
-      @keyframes blink {
-        0%,
-        50% {
-          opacity: 1;
-        }
-        51%,
-        100% {
-          opacity: 0;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .construction-container {
-          padding: 20px;
-        }
-
-        h1 {
-          font-size: 2em;
-        }
-
-        .construction-emoji {
-          font-size: 3em;
-        }
-      }
-    </style>
+    <title>Under Construction — Louis Sloot</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23326d27'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='%23e8f5e9' font-family='Georgia,serif'>L</text></svg>"
+    />
+    <script>
+      /* Set the theme before first paint to avoid a flash. */
+      document.documentElement.setAttribute(
+        "data-theme",
+        localStorage.getItem("theme") ||
+          (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+      );
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="content.js"></script>
+    <script defer src="site.js"></script>
   </head>
   <body>
-    <div class="construction-container">
-      <div class="construction-emoji">🚧</div>
-
-      <h1>Under Construction</h1>
-
-      <div class="subtitle">Thank you for your patience.</div>
-
-      <div class="progress-bar">
-        <div class="progress-fill"></div>
-      </div>
-      <div class="status-text">Progress: 23%</div>
-
-      <div class="fun-facts">
-        <h3>🤖 Current Status:</h3>
-        <p>• Compiling motivation... <span class="blinking">█</span></p>
-        <p>• Rationalizing procrastination</p>
-        <p>• ETA: Soonish™</p>
-      </div>
-
-      <div class="back-link">
-        <a href="index.html">← Back to Safety</a>
-      </div>
-    </div>
+    <div id="site-header"></div>
+    <main class="container">
+      <div class="construction" id="construction"></div>
+      <noscript>
+        <p>
+          This page is under construction (and rendered with a little JavaScript).
+          <a href="index.html">Back home</a>
+        </p>
+      </noscript>
+    </main>
+    <div id="site-footer"></div>
   </body>
 </html>
